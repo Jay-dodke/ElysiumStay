@@ -1,0 +1,42 @@
+<!-- Sticky transparent Navbar  -->
+<nav
+  class="navbar navbar-expand-md sticky-top shadow-sm animate__animated animate__fadeInDown"
+  style="
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  ">
+  <div class="container">
+    <!--  Brand Icon  -->
+    <a class="navbar-brand d-flex align-items-center" href="/listings">
+      <i class="fa-solid fa-mountain-sun me-2 text-danger fs-4"></i>
+      <span class="fw-bold fs-5">ElysiumStay</span>
+    </a>
+
+    <!-- Hamburger menu for small screens -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--  Main navigation links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <div class="navbar-nav ms-auto">
+        <!--  Home link -->
+        <a class="nav-link px-3" href="/">
+          <i class="fa-solid fa-house me-1"></i> Home
+        </a>
+        <!--  All listings -->
+        <a class="nav-link px-3" href="/listings">
+          <i class="fa-solid fa-map-location-dot me-1"></i> All Stays
+        </a>
+        <!--  Add new listing -->
+        <a class="nav-link px-3" href="/listings/new">
+          <i class="fa-solid fa-circle-plus me-1"></i> Add Stay
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

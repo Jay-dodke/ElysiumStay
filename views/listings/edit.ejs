@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate") -%>
+
+<!-- Page Header -->
+<div class="text-center my-5" data-aos="fade-down">
+  <h2 class="fw-bold">Edit Your Stay</h2>
+  <p class="text-muted">Make changes to your listing details.</p>
+</div>
+
+<!--  Form Section -->
+<div class="row justify-content-center">
+  <div class="col-md-8" data-aos="zoom-in-up">
+    <form
+      method="POST"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      class="shadow-lg p-4 rounded-4 bg-white">
+      <!--  Title -->
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          required
+          name="listing[title]"
+          value="<%= listing.title %>"
+          type="text"
+          class="form-control form-control-lg" />
+      </div>
+
+      <!--  Description -->
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          required
+          name="listing[description]"
+          class="form-control"
+          rows="3">
+<%= listing.description %></textarea
+        >
+      </div>
+
+      <!--  Image -->
+      <div class="mb-3">
+        <label for="image" class="form-label">Image URL</label>
+        <input
+          required
+          name="listing[image][url]"
+          value="<%= listing.image.url %>"
+          type="text"
+          class="form-control" />
+      </div>
+
+      <!--  Price -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Price (INR)</label>
+        <input
+          required
+          name="listing[price]"
+          value="<%= listing.price %>"
+          type="number"
+          class="form-control" />
+      </div>
+
+      <!-- Country -->
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input
+          required
+          name="listing[country]"
+          value="<%= listing.country %>"
+          type="text"
+          class="form-control" />
+      </div>
+
+      <!--  Location -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input
+          required
+          name="listing[location]"
+          value="<%= listing.location %>"
+          type="text"
+          class="form-control" />
+      </div>
+
+      <!--  Submit -->
+      <div class="text-center mt-4">
+        <button
+          class="btn btn-success px-5 py-2 animate__animated animate__pulse animate__infinite">
+          <i class="fa-solid fa-floppy-disk me-2"></i>Save Changes
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

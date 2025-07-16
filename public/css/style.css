@@ -1,0 +1,87 @@
+/* Listing card hover effect */
+.listing-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.listing-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SHOW EJS */
+.show-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.show-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* new ejs */
+
+form {
+  transition: all 0.3s ease-in-out;
+}
+form:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+input:focus,
+textarea:focus {
+  border-color: #fe424d;
+  box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+/* edit ejs */
+
+form {
+  transition: all 0.3s ease-in-out;
+}
+form:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+input:focus,
+textarea:focus {
+  border-color: #fe424d;
+  box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+/* footer section */
+
+.footer-link {
+  color: #343a40;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fe424d;
+  text-decoration: underline;
+}
+
+.footer-social {
+  font-size: 1.2rem;
+  color: #343a40;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social:hover {
+  color: #fe424d;
+  transform: scale(1.2);
+}
+
+footer input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer button.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* END */
