@@ -1,0 +1,45 @@
+<% layout("layouts/boilerplate") %>
+
+<section class="careers-container">
+  <h1 class="career-title">Join Our Team</h1>
+  <p class="career-subtitle">
+    We are always on the lookout for passionate individuals.
+  </p>
+
+  <div class="job-listings">
+    <div class="job-card">
+      <h2>Frontend Developer Intern</h2>
+      <p>Build stunning interfaces and bring designs to life.</p>
+    </div>
+    <div class="job-card">
+      <h2>Backend Developer (x2)</h2>
+      <p>Work with Node.js, MongoDB and scale our platform.</p>
+    </div>
+    <div class="job-card">
+      <h2>UI/UX Designers (x4)</h2>
+      <p>Create seamless and beautiful user experiences.</p>
+    </div>
+    <div class="job-card">
+      <h2>Assistant Roles</h2>
+      <p>Support our daily operations and customer care.</p>
+    </div>
+  </div>
+
+  <form class="resume-form" method="POST" action="/listings/careers">
+    <h3>Submit Your Resume</h3>
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <select name="role" required>
+      <option value="">Select Role</option>
+      <option>Frontend Intern</option>
+      <option>Backend Developer</option>
+      <option>Designer</option>
+      <option>Assistant</option>
+    </select>
+    <textarea
+      name="message"
+      rows="4"
+      placeholder="Tell us about yourself..."></textarea>
+    <button type="submit">Submit Application</button>
+  </form>
+</section>

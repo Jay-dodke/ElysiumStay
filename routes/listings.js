@@ -8,6 +8,27 @@ router.get("/", async (req, res) => {
   res.render("listings/index", {allListings});
 });
 
+// ================================ Coming soon =================================
+
+router.get("/coming-soon", (req, res) => {
+  res.render("listings/comingSoon");
+});
+
+// ======================= PRIVACY ROUTE ==========================
+router.get("/privacy", (req, res) => {
+  res.render("listings/privacy");
+});
+
+// ======================= Term & Conditions ROUTE ==========================
+router.get("/terms", (req, res) => {
+  res.render("listings/terms");
+});
+
+// =================== Career Page GET Route ===================
+router.get("/careers", (req, res) => {
+  res.render("listings/careers");
+});
+
 // ======================= NEW ROUTE =============================
 router.get("/new", (req, res) => {
   res.render("listings/new");
@@ -47,4 +68,13 @@ router.delete("/:id", async (req, res) => {
   await Listing.findByIdAndDelete(id);
   res.redirect("/listings");
 });
+
+// =================== Resume POST Submit Route ===================
+router.post("/careers", (req, res) => {
+  const {name, email, role, message} = req.body;
+  console.log("Resume Submitted:", {name, email, role, message});
+  // TODO: Save to DB or send via mail
+  res.send("Thank you! We will get back to you soon.");
+});
+
 module.exports = router;

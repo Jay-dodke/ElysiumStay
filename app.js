@@ -41,6 +41,9 @@ app.get("/", (req, res) => {
 
 app.use("/listings", listingsRoutes); // All listings routes handled separately
 
+const listingsRouter = require("./routes/listings");
+app.use("/listings", listingsRouter);
+
 // page not found
 app.use((req, res) => {
   res.status(404).send("Page Not Found");
