@@ -2,7 +2,7 @@
 
 <!--  Page Header -->
 <div class="text-center my-5" data-aos="fade-down">
-  <h2 class="fw-bold">Create a New Stay </h2>
+  <h2 class="fw-bold">Create a New Stay</h2>
   <p class="text-muted">Fill in the details to list your unique getaway!</p>
 </div>
 
@@ -12,7 +12,8 @@
     <form
       method="POST"
       action="/listings"
-      class="shadow-lg p-4 rounded-4 bg-white">
+      class="shadow-lg p-4 rounded-4 bg-white needs-validation"
+      novalidate>
       <!--  Title -->
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -22,8 +23,8 @@
           type="text"
           placeholder="e.g., Luxury Treehouse in Manali"
           class="form-control form-control-lg" />
+        <div class="valid-feedback">Title Looks good!</div>
       </div>
-
       <!--  Description -->
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
@@ -89,3 +90,4 @@
     </form>
   </div>
 </div>
+<script src="/js/script.js"></script>
