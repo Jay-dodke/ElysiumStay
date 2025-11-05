@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
   res.redirect("/listings"); // Home -> redirect to listings
 });
 
-app.use("/listings", listingsRoutes); 
+app.use("/listings", listingsRoutes);
 
 // 404 handler (runs when no route matches)
 app.all("*", (req, res, next) => {

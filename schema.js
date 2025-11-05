@@ -1,12 +1,19 @@
 const Joi = require("joi");
 
+const imageSchema = Joi.object({
+  url: Joi.string().uri().trim().required(),
+});
+
 module.exports.listingSchema = Joi.object({
   listing: Joi.object({
-    title: Joi.string().required(),
-    description: Joi.string().required(),
-    location: Joi.string().required(),
+    title: Joi.string().trim().required(),
+    description: Joi.string().trim().required(),
+    location: Joi.string().trim().required(),
     price: Joi.number().min(0).required(),
-    country: Joi.string(),
-    image: Joi.string().allow("", null),
+    country: Joi.string().trim().optional(),
+    image: imageSchema.required(),
   }).required(),
 });
+
+module.exports.validateListing = (data) =>
+  module.exports.listingSchema.validate(data, {abortEarly: false});
